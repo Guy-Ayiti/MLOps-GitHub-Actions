@@ -1,0 +1,5 @@
+project_id = "proyecto-mlops-504619"
+dataset_id = "CensusTable"
+table_id = "Census_by_Age"
+region     = "US"
+routine_id = "census_filter_by_age"
