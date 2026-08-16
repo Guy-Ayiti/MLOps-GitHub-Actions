@@ -5,15 +5,15 @@ SA_CLOUD_RUN="cloudrun-account@proyecto-mlops-504619.iam.gserviceaccount.com"
 
 #PIPELINE VERTEX
 
-gcloud storage buckets add-iam-policy-binding gs://proyecto-mlops-504619 \
+gcloud storage buckets add-iam-policy-binding gs://cloudstorage-mlops \
   --member="serviceAccount:$SA_GITHUB" \
   --role="roles/storage.legacyBucketWriter"
 
-gcloud storage buckets add-iam-policy-binding gs://proyecto-mlops-504619 \
+gcloud storage buckets add-iam-policy-binding gs://cloudstorage-mlops \
   --member="serviceAccount:$SA_GITHUB" \
   --role="roles/storage.objectCreator"
 
-gcloud storage buckets add-iam-policy-binding gs://proyecto-mlops-504619 \
+gcloud storage buckets add-iam-policy-binding gs://cloudstorage-mlops \
   --member="serviceAccount:$SA_GITHUB" \
   --role="roles/storage.objectViewer"
 
