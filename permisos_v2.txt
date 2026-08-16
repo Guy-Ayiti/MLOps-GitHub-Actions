@@ -1,19 +1,19 @@
-PROJECT_ID="<PROJECT_ID>"
-SA_GITHUB="<SA_GITHUB>"
-SA_VERTEX="<SA_VERTEX>"
-SA_CLOUD_RUN="<SA_CLOUD_RUN>"
+PROJECT_ID="proyecto-mlops-504619"
+SA_GITHUB="github-actions-account@proyecto-mlops-504619.iam.gserviceaccount.com"
+SA_VERTEX="vertex-processing@proyecto-mlops-504619.iam.gserviceaccount.com"
+SA_CLOUD_RUN="cloudrun-account@proyecto-mlops-504619.iam.gserviceaccount.com"
 
 #PIPELINE VERTEX
 
-gcloud storage buckets add-iam-policy-binding gs://mlops15 \
+gcloud storage buckets add-iam-policy-binding gs://proyecto-mlops-504619 \
   --member="serviceAccount:$SA_GITHUB" \
   --role="roles/storage.legacyBucketWriter"
 
-gcloud storage buckets add-iam-policy-binding gs://mlops15 \
+gcloud storage buckets add-iam-policy-binding gs://proyecto-mlops-504619 \
   --member="serviceAccount:$SA_GITHUB" \
   --role="roles/storage.objectCreator"
 
-gcloud storage buckets add-iam-policy-binding gs://mlops15 \
+gcloud storage buckets add-iam-policy-binding gs://proyecto-mlops-504619 \
   --member="serviceAccount:$SA_GITHUB" \
   --role="roles/storage.objectViewer"
 
